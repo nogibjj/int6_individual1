@@ -1,8 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
-from fpdf import FPDF
 
 
 def read_data(df_path):

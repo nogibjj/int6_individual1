@@ -1,4 +1,5 @@
-from mylib.lib import *
+from mylib.lib import read_data, calc_stats, create_viz, create_viz_tempo
+import os
 
 data_path = "data/spotify.csv"
 
@@ -27,6 +28,30 @@ def test_calc_stats():
     print("All assertions passed for calc_stats.")
 
 
+# test visualizations
+def test_create_viz():
+    df = read_data(data_path)
+    create_viz(df, save=True)
+    # verify file was created and not empty
+    assert os.path.exists("resources/plot.png"), "The plot.png file does not exist."
+    assert os.path.getsize("resources/plot.png") > 0, "The plot.png file is empty."
+
+
+def test_create_viz_tempo():
+    df = read_data(data_path)
+    create_viz_tempo(df, save=True)
+    # verify file was created and not empty
+    assert os.path.exists(
+        "resources/plot_tempo.png"
+    ), "The plot_tempo.png file does not exist."
+    assert (
+        os.path.getsize("resources/plot_tempo.png") > 0
+    ), "The plot_tempo.png file is empty."
+    print("All assertions passed for test_create_viz.")
+
+
 if __name__ == "__main__":
     test_read_data()
     test_calc_stats()
+    test_create_viz()
+    test_create_viz_tempo()

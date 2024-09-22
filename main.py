@@ -1,10 +1,13 @@
-from mylib.lib import *
+from fpdf import FPDF
+from mylib.lib import read_data, calc_stats, create_viz, create_viz_tempo
+import os
 
 # create/save all visualizaiton
 def create_all_viz(df, save):
     create_viz(df, save)
     create_viz_tempo(df, save)
-    print(f"Visualizations saved to resources")
+    print("Visualizations saved to resources")
+
 
 # create pdf report based on stats and visualizations
 def create_report(data_path):
