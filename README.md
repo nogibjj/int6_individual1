@@ -58,3 +58,6 @@ Data visualizations are saved to a `resources` folder by running `python test_ma
 <img width="600" alt="showing plots image" src=resources/working_plots.png>
 
 PDF report is created by running `python test_main.py` calling `create_report(data_path)`. You can view this report [here.](/spotify_report.pdf)
+
+## Demo Video Link
+[Video Link](https://youtu.be/uJ7U-2ERJjg)
