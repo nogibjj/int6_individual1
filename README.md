@@ -35,15 +35,15 @@ These functions are tested in test_lib.py and test_main.py using pytest, and in 
 3. Alternatively, git clone the repository and use `make install` to run the code locally.
 
 ## Check format and test errors 
-1. Format code `make format`
+1. Format code `make format` with black
 
     <img width="600" alt="working make format" src=resources/working_format.png>
 
-2. Lint code `make lint`
+2. Lint code `make lint` with ruff
 
     <img width="600" alt="working make lint" src=resources/working_lint.png>
 
-3. Test code `make test`
+3. Test code `make test` with pytest and nbval
 
     <img width="600" alt="passing test cases image" src=resources/working_test.png>
 
